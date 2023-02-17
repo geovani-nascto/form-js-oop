@@ -15,13 +15,16 @@ body{
 }
 
 .main{
-    width: 900px;
-    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: 500px;
     height: auto;
     background-color: #fff;
     margin: 0 auto;
     padding: 30px 20px;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.185);
 }
 
 .form{
@@ -50,4 +53,22 @@ input[type='submit']{
 
 input[type='submit']:hover{
     background-color: #4f66e6;
+}
+
+.dev h4{
+    text-align: center;
+    font-weight: 400;
+}
+
+.dev h4 span{
+    font-weight: 600;
+}
+
+.dev a{
+    text-decoration: none;
+    color: #5c74fc;
+}
+
+.dev a:hover{
+    color: #4f66e6;
 }

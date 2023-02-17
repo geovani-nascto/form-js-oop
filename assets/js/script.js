@@ -76,6 +76,13 @@ class Button extends Input{
     }
 }
 
+class Validate{
+    constructor(value, className){
+        this.value = value;
+        this.className = className;
+    }
+}
+
 let form = new Form('.formArea', 'POST', '#', 'form');
 
 let email = new Input('email', 'Digite seu e-mail', 'inputField');
