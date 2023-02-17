@@ -2,10 +2,11 @@ class Form{
     method = 'GET';
     items = [];
 
-    constructor(container, method, action){
+    constructor(container, method, action, className){
         this.container = document.querySelector(container);
         this.method = method;
         this.action = action;
+        this.className = className;
     }
 
     addItem(item){
@@ -16,6 +17,7 @@ class Form{
         let formElement = document.createElement('form');
         formElement.setAttribute('method', this.method);
         formElement.setAttribute('action', this.action);
+        formElement.setAttribute('class', this.className);
 
         for(let i in this.items){
             this.items[i].displayOn(formElement);
@@ -74,7 +76,7 @@ class Button extends Input{
     }
 }
 
-let form = new Form('.formArea', 'POST', '#');
+let form = new Form('.formArea', 'POST', '#', 'form');
 
 let email = new Input('email', 'Digite seu e-mail', 'inputField');
 email.type = 'email';
